@@ -29,16 +29,14 @@
                         @endforeach
                     </div>
                 </div>
-                <a href="{{route('comics.create')}}">Crea una nueva pasta</a>
+
+                <a href="{{route('comics.create')}}"><button type="button" class="btn btn-info">Crea una presentazione del comic</button></a>
             </div>
         </div>
     </main>
     <footer>
 
     </footer>
-    <h1>laravel template</h1>
-
-    <img src="{{ Vite::asset('resources/img/kaneki.jpg') }}" alt="paperella lavarel template">
 </body>
 
 </html>
