@@ -42,11 +42,11 @@
                 <input type="text" class="form-control" name="thumbnail">
             </div>
             <div class="mb-3">
-                <label class="form-label">Artisti</label>
+                <label class="form-label">Artisti (mettere le virgole se sono più di una persona)</label>
                 <input type="text" class="form-control" name="artists">
             </div>
             <div class="mb-3">
-                <label class="form-label">Scrittori</label>
+                <label class="form-label">Scrittori (mettere le virgole se sono più di una persona)</label>
                 <input type="text" class="form-control" name="writers">
             </div>
             <div class="mb-3">
@@ -59,6 +59,9 @@
             </div>
             <button class="btn btn-primary">Crea Comic</button>
         </form>
+        <br>
+        <a class="d-block" href="{{route('comics.index')}}"><button type="button" class="btn btn-info">Torna a home</button></a>
+
     </div>
 </body>
 

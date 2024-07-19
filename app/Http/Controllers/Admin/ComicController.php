@@ -13,11 +13,9 @@ class ComicController extends Controller
      */
     public function index()
     {
+        $comics = Comic::all();
 
-         $comics = Comic::all();
-
-         return view('comics.index', compact('comics'));
-        
+        return view('comics.index', compact('comics'));
     }
 
     /**
@@ -30,11 +28,9 @@ class ComicController extends Controller
 
     /**
      * Store a newly created resource in storage.
-     */
+     */ 
     public function store(Request $request)
     {
-
-
         $data = $request->all();
         $comic = new Comic();
 
@@ -53,6 +49,7 @@ class ComicController extends Controller
         return redirect()->route('comics.show', $comic->id);
     }
 
+
     /**
      * Display the specified resource.
      */
@@ -63,7 +60,6 @@ class ComicController extends Controller
         // Convierte los campos JSON en arrays
         $artists = json_decode($comic->artists, true) ?? [];
         $writers = json_decode($comic->writers, true) ?? [];
-
         return view('comics.show', compact('comic', 'artists', 'writers'));
     }
     /**
